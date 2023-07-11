@@ -124,3 +124,15 @@ WebDriver BiDi listening on ws://127.0.0.1:58752
 1689037430392	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 [ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
 DevTools listening on ws://127.0.0.1:58752/devtools/browser/919d8e8b-32f2-4b03-b680-c2544edbc6af
+1689037614325	geckodriver	INFO	Listening on 127.0.0.1:58839
+1689037617396	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58840" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Beatriz\\AppData\\Local\\Temp\\rust_mozprofile11qB9I"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1689037617874	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1689037617880	Marionette	INFO	Listening on port 58847
+Read port: 58847
+WebDriver BiDi listening on ws://127.0.0.1:58840
+1689037618173	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR glean_core] Error setting metrics feature config: Json(Error("EOF while parsing a value", line: 1, column: 0))
+DevTools listening on ws://127.0.0.1:58840/devtools/browser/0787a5f5-250b-48e2-ae2a-b5f9e84a6e3d
