@@ -12,16 +12,16 @@ class NewVisitorTest(unittest.TestCase):
         self.browser.quit()
     
     def test_can_start_a_list_and_retrieve_it_later(self):
-        browser = self.browser  # Fix 1: Use self.browser instead of browser
+        browser = self.browser 
         browser.get('http://localhost:8000')
 
-        self.assertIn('To-Do', browser.title)  # Fix 2: Use self.browser instead of browser
-        header_text = browser.find_element_by_tag_name('h1').text  # Fix 3: Use text instead of header_text
+        self.assertIn('To-Do', browser.title)  
+        header_text = browser.find_element_by_tag_name('h1').text  
         self.assertIn('To-Do', header_text)
 
         inputbox = browser.find_element_by_id('id_new_item')
         self.assertEqual(
-            inputbox.get_attribute('placeholder'),  # Fix 4: Use get_attribute instead of get_attribte
+            inputbox.get_attribute('placeholder'),
             'Enter a to-do item'
         )
         inputbox.send_keys('Buy peacock feathers')
@@ -29,12 +29,14 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
       
-        table = browser.find_element_by_id('id_lists_table')
-        rows = table.find_elements_by_tag_name('tr')  # Fix 5: Use find_elements_by_tag_name instead of find_element_by_tag_name
+        table = self.browser.find_element_by_id('id_lists_table')
+
+        rows = table.find_elements_by_tag_name('tr')  
         self.assertTrue(
             any(row.text == '1: Buy peacock feathers' for row in rows),
-            "New to-do item did not appear in the table"  # Fix 6: Corrected the typo in the message
+            "New to-do item did not appear in the table" 
         )
+
 
         self.fail('Finish the test!')
 
